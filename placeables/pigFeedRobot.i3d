@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="dairyFeedF4500" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Maya Exporter" version="10.0.0" revision="41901" />
+  </Asset>
+
+  <Files>
+    <File fileId="77" filename="$data/placeables/gea/dairyFeed/dairyFeedBelt_normal.png" />
+    <File fileId="78" filename="$data/placeables/gea/dairyFeed/dairyFeedBelt_vmask.png" />
+    <File fileId="4" filename="$data/placeables/gea/dairyFeed/dairyFeedDecal_diffuse.png" />
+    <File fileId="72" filename="$data/placeables/gea/dairyFeed/dairyFeedDecal_normal.png" />
+    <File fileId="76" filename="$data/placeables/gea/dairyFeed/dairyFeedHoses_vmask.png" />
+    <File fileId="70" filename="$data/placeables/gea/dairyFeed/dairyFeed_normal.png" />
+    <File fileId="71" filename="$data/placeables/gea/dairyFeed/dairyFeed_vmask.png" />
+    <File fileId="65" filename="$data/placeables/gea/dairyFeedF4500/dairyFeedF4500Alpha_diffuse.png" />
+    <File fileId="66" filename="$data/placeables/gea/dairyFeedF4500/dairyFeedF4500Alpha_normal.png" />
+    <File fileId="67" filename="$data/placeables/gea/dairyFeedF4500/dairyFeedF4500Alpha_vmask.png" />
+    <File fileId="59" filename="$data/placeables/gea/dairyFeedF4500/dairyFeedF4500Belt_diffuse.png" />
+    <File fileId="60" filename="$data/placeables/gea/dairyFeedF4500/dairyFeedF4500Belt_normal.png" />
+    <File fileId="61" filename="$data/placeables/gea/dairyFeedF4500/dairyFeedF4500Belt_vmask.png" />
+    <File fileId="18" filename="$data/placeables/gea/dairyFeedF4500/dairyFeedF4500Building_mask.png" />
+    <File fileId="62" filename="$data/placeables/gea/dairyFeedF4500/dairyFeedF4500Decals_diffuse.png" />
+    <File fileId="63" filename="$data/placeables/gea/dairyFeedF4500/dairyFeedF4500Decals_normal.png" />
+    <File fileId="30" filename="$data/placeables/gea/dairyFeedF4500/dairyFeedF4500LoadingStation_normal.png" />
+    <File fileId="31" filename="$data/placeables/gea/dairyFeedF4500/dairyFeedF4500LoadingStation_vmask.png" />
+    <File fileId="51" filename="$data/placeables/gea/dairyFeedF4500/dairyFeedF4500Magazine_normal.png" />
+    <File fileId="52" filename="$data/placeables/gea/dairyFeedF4500/dairyFeedF4500Magazine_vmask.png" />
+    <File fileId="14" filename="$data/placeables/lely/vectorGarage/lelyVectorGarage_diffuse.png" />
+    <File fileId="15" filename="$data/placeables/lely/vectorGarage/lelyVectorGarage_normal.png" />
+    <File fileId="16" filename="$data/placeables/lely/vectorGarage/lelyVectorGarage_specular.png" />
+    <File fileId="28" filename="$data/placeables/unia/shared/uniaSilosLogo_diffuse.png" />
+    <File fileId="19" filename="$data/placeables/unia/shared/uniaSilos_diffuse.png" />
+    <File fileId="22" filename="$data/placeables/unia/shared/uniaSilos_mask.png" />
+    <File fileId="20" filename="$data/placeables/unia/shared/uniaSilos_normal.png" />
+    <File fileId="21" filename="$data/placeables/unia/shared/uniaSilos_specular.png" />
+    <File fileId="17" filename="$data/shaders/buildingShader.xml" />
+    <File fileId="25" filename="$data/shaders/decalShader.xml" />
+    <File fileId="5" filename="$data/shaders/glowShader.xml" />
+    <File fileId="27" filename="$data/shaders/placeableShader.xml" />
+    <File fileId="32" filename="$data/shaders/vehicleShader.xml" />
+    <File fileId="23" filename="$data/shared/assets/assetLibraryDecals_diffuse.png" />
+    <File fileId="24" filename="$data/shared/assets/assetLibraryDecals_normal.png" />
+    <File fileId="26" filename="$data/shared/assets/assetLibraryStickers_diffuse.png" />
+    <File fileId="3" filename="$data/shared/assets/lights/lizard/sideMarker20Orange.i3d" />
+    <File fileId="2" filename="$data/shared/assets/lights/lizard/sideMarker20Red.i3d" />
+    <File fileId="1" filename="$data/shared/assets/lights/lizard/sideMarker20White.i3d" />
+    <File fileId="6" filename="$data/shared/default_normal.png" />
+    <File fileId="73" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_diffuse.png" />
+    <File fileId="74" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_normal.png" />
+    <File fileId="75" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_specular.png" />
+    <File fileId="64" filename="$data/shared/detailLibrary/calibrated/grainSmall_specular.png" />
+    <File fileId="34" filename="$data/shared/detailLibrary/flat_normal.png" />
+    <File fileId="56" filename="$data/shared/detailLibrary/metallic/clear_diffuse.png" />
+    <File fileId="57" filename="$data/shared/detailLibrary/metallic/clear_specular.png" />
+    <File fileId="39" filename="$data/shared/detailLibrary/metallic/metalGalvanized_diffuse.png" />
+    <File fileId="40" filename="$data/shared/detailLibrary/metallic/metalGalvanized_normal.png" />
+    <File fileId="41" filename="$data/shared/detailLibrary/metallic/metalGalvanized_specular.png" />
+    <File fileId="68" filename="$data/shared/detailLibrary/metallic/scratched_diffuse.png" />
+    <File fileId="69" filename="$data/shared/detailLibrary/metallic/scratched_specular.png" />
+    <File fileId="45" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png" />
+    <File fileId="46" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png" />
+    <File fileId="47" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png" />
+    <File fileId="48" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png" />
+    <File fileId="42" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticGearShift_diffuse.png" />
+    <File fileId="43" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticGearShift_normal.png" />
+    <File fileId="44" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticGearShift_specular.png" />
+    <File fileId="49" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticGraniteGrainSmall_diffuse.png" />
+    <File fileId="50" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticGraniteGrainSmall_specular.png" />
+    <File fileId="53" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticLeatherGrainSmall_diffuse.png" />
+    <File fileId="54" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticLeatherGrainSmall_normal.png" />
+    <File fileId="55" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticLeatherGrainSmall_specular.png" />
+    <File fileId="33" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_diffuse.png" />
+    <File fileId="35" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_specular.png" />
+    <File fileId="58" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubberBlack_diffuse.png" />
+    <File fileId="36" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_diffuse.png" />
+    <File fileId="37" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_normal.png" />
+    <File fileId="38" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_specular.png" />
+    <File fileId="11" filename="$data/shared/warningStripes_diffuse.png" />
+    <File fileId="12" filename="$data/shared/warningStripes_normal.png" />
+    <File fileId="13" filename="$data/shared/warningStripes_specular.png" />
+    <File fileId="29" filename="$data/shared/white_diffuse.png" />
+    <File fileId="9" filename="$dataS/menu/hud/fillTypes/hud_fill_wheat.png" />
+    <File fileId="10" filename="$dataS/menu/hud/fillTypes/hud_fill_maize.png" />
+    <File fileId="7" filename="$dataS/menu/hud/fillTypes/hud_fill_soyBean.png" />
+    <File fileId="8" filename="$dataS/menu/hud/fillTypes/hud_fill_potato.png" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="28" diffuseColor="0.5 0.5 0.5 1">
+    </Material>
+    <Material name="dairyFeedDecal_mat" materialId="32" specularColor="0 0 0" customShaderId="5" customShaderVariation="staticLight">
+      <Texture fileId="4"/>
+    </Material>
+    <Material name="default_mat" materialId="27" diffuseColor="0.5 0.5 0.5 1" specularColor="0 0 0">
+      <Normalmap fileId="6"/>
+    </Material>
+    <Material name="hud_01_mat" materialId="59">
+      <Texture fileId="7"/>
+    </Material>
+    <Material name="hud_02_mat" materialId="60">
+      <Texture fileId="8"/>
+    </Material>
+    <Material name="hud_03_mat" materialId="61">
+      <Texture fileId="9"/>
+    </Material>
+    <Material name="hud_04_mat" materialId="62">
+      <Texture fileId="10"/>
+    </Material>
+    <Material name="warningStripes_mat" materialId="58">
+      <Texture fileId="11"/>
+      <Normalmap fileId="12"/>
+      <Glossmap fileId="13"/>
+    </Material>
+    <Material name="lelyVectorGarage_mat" materialId="67" customShaderId="17">
+      <CustomParameter name="dirtMossMix" value="1.0 1.0"/>
+      <CustomParameter name="dirtMossSmoothness" value="0.12 0.12"/>
+      <Custommap name="mMaskMap" fileId="18"/>
+      <Texture fileId="14"/>
+      <Normalmap fileId="15"/>
+      <Glossmap fileId="16"/>
+    </Material>
+    <Material name="uniaSilos_mat" materialId="63" customShaderId="17">
+      <CustomParameter name="dirtMossMix" value="1.0 1.0"/>
+      <CustomParameter name="dirtMossSmoothness" value="0.12 0.82"/>
+      <Custommap name="mMaskMap" fileId="22"/>
+      <Texture fileId="19"/>
+      <Normalmap fileId="20"/>
+      <Glossmap fileId="21"/>
+    </Material>
+    <Material name="assetLibraryDecals_mat" materialId="64" specularColor="0.439216 1 1" alphaBlending="true" customShaderId="25">
+      <Texture fileId="23"/>
+      <Normalmap fileId="24"/>
+    </Material>
+    <Material name="assetLibraryStickers_mat" materialId="65" specularColor="0 1 0" customShaderId="27">
+      <Texture fileId="26"/>
+      <Normalmap fileId="6"/>
+    </Material>
+    <Material name="uniaSilosLogo_mat" materialId="66" specularColor="0 1 0" customShaderId="27">
+      <Texture fileId="28"/>
+      <Normalmap fileId="6"/>
+    </Material>
+    <Material name="effect1:lambert2" materialId="57" diffuseColor="0.5 0.5 0.5 1">
+      <Normalmap fileId="6"/>
+    </Material>
+    <Material name="standardSurface1" materialId="13" diffuseColor="0.4 0.4 0.4 1">
+    </Material>
+    <Material name="dairyFeedF4500LoadingStation_plasticPaintedBlack_mat" materialId="3" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <Custommap name="detailDiffuse" fileId="33"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="35"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="30"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="dairyFeedF4500LoadingStation_rubber_01_mat" materialId="6" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.133 0.06259 0.978"/>
+      <CustomParameter name="porosity" value="0.5"/>
+      <Custommap name="detailDiffuse" fileId="36"/>
+      <Custommap name="detailNormal" fileId="37"/>
+      <Custommap name="detailSpecular" fileId="38"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="30"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="dairyFeedF4500LoadingStation_rubber_02_mat" materialId="7" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.399 0 0"/>
+      <CustomParameter name="porosity" value="0.5"/>
+      <Custommap name="detailDiffuse" fileId="36"/>
+      <Custommap name="detailNormal" fileId="37"/>
+      <Custommap name="detailSpecular" fileId="38"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="30"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="dairyFeedF4500LoadingStation_metalGalvanized_mat" materialId="1" customShaderId="32">
+      <Custommap name="detailDiffuse" fileId="39"/>
+      <Custommap name="detailNormal" fileId="40"/>
+      <Custommap name="detailSpecular" fileId="41"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="30"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="dairyFeedF4500LoadingStation_plasticGearShift_mat" materialId="9" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.876 0.2024 0.3578"/>
+      <Custommap name="detailDiffuse" fileId="42"/>
+      <Custommap name="detailNormal" fileId="43"/>
+      <Custommap name="detailSpecular" fileId="44"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="30"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="dairyFeedF4500LoadingStation_silverScratched_mat" materialId="4" customShaderId="32">
+      <Custommap name="detailDiffuse" fileId="45"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="46"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="30"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="dairyFeedF4500LoadingStation_metalPaintedGray_mat" materialId="2" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.55 0.58 0.48"/>
+      <Custommap name="detailDiffuse" fileId="47"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="48"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="30"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="dairyFeedF4500LoadingStation_plasticPaintedGray_mat" materialId="8" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.4737 0.3486 0.009"/>
+      <Custommap name="detailDiffuse" fileId="33"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="35"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="30"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="dairyFeedF4500LoadingStation_plasticGraniteGrainSmall_01_mat" materialId="5" customShaderId="32">
+      <Custommap name="detailDiffuse" fileId="49"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="50"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="30"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_plasticPaintedBlack_mat" materialId="41" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <Custommap name="detailDiffuse" fileId="33"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="35"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_metalPainted_01_mat" materialId="45" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.01771 0.08806 0.9323"/>
+      <Custommap name="detailDiffuse" fileId="47"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="48"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_silverScratched_mat" materialId="35" customShaderId="32">
+      <Custommap name="detailDiffuse" fileId="45"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="46"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_plasticPainted_01_mat" materialId="48" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.007353 0.03655 0.387"/>
+      <Custommap name="detailDiffuse" fileId="33"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="35"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_plasticPainted_02_mat" materialId="46" customShaderId="32">
+      <Custommap name="detailDiffuse" fileId="33"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="35"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_plasticLeatherGrainSmall_mat" materialId="44" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.399 0 0"/>
+      <Custommap name="detailDiffuse" fileId="53"/>
+      <Custommap name="detailNormal" fileId="54"/>
+      <Custommap name="detailSpecular" fileId="55"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_chrome_mat" materialId="42" customShaderId="32">
+      <Custommap name="detailDiffuse" fileId="56"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="57"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_metalGalvanized_mat" materialId="34" customShaderId="32">
+      <Custommap name="detailDiffuse" fileId="39"/>
+      <Custommap name="detailNormal" fileId="40"/>
+      <Custommap name="detailSpecular" fileId="41"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_rubberBlackHoses_mat" materialId="37" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.01 0.01 0.01"/>
+      <CustomParameter name="porosity" value="0.5"/>
+      <Custommap name="detailDiffuse" fileId="58"/>
+      <Custommap name="detailNormal" fileId="37"/>
+      <Custommap name="detailSpecular" fileId="38"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_rubberBlack_mat" materialId="38" customShaderId="32">
+      <CustomParameter name="porosity" value="0.5"/>
+      <Custommap name="detailDiffuse" fileId="58"/>
+      <Custommap name="detailNormal" fileId="37"/>
+      <Custommap name="detailSpecular" fileId="38"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_metalPainted_02_mat" materialId="36" customShaderId="32">
+      <CustomParameter name="colorScale" value="0 0.19 0.12"/>
+      <Custommap name="detailDiffuse" fileId="47"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="48"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_metalPaintedBlack_mat" materialId="43" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <Custommap name="detailDiffuse" fileId="47"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="48"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_rubber_mat" materialId="49" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.1164 0.2782 0.0529"/>
+      <CustomParameter name="porosity" value="0.5"/>
+      <Custommap name="detailDiffuse" fileId="36"/>
+      <Custommap name="detailNormal" fileId="37"/>
+      <Custommap name="detailSpecular" fileId="38"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_plasticGraniteGrainSmall_mat" materialId="47" customShaderId="32">
+      <CustomParameter name="colorScale" value="1 0.5764 0.0039"/>
+      <Custommap name="detailDiffuse" fileId="49"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="50"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_metalPaintedGray_mat" materialId="40" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.5492 0.5789 0.4823"/>
+      <Custommap name="detailDiffuse" fileId="47"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="48"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Belt_silverScratched_mat" materialId="54" customShaderId="32" customShaderVariation="meshScroll">
+      <CustomParameter name="lengthAndRadius" value="5.567 0.083 0 0"/>
+      <Custommap name="detailDiffuse" fileId="45"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="46"/>
+      <Texture fileId="59"/>
+      <Normalmap fileId="60"/>
+      <Glossmap fileId="61"/>
+    </Material>
+    <Material name="dairyFeedF4500Decals_silverScratched_01_mat" materialId="50" customShaderId="32" customShaderVariation="vmaskUV2_normalUV3">
+      <CustomParameter name="alphaBlendingClipThreshold" value="1"/>
+      <Custommap name="detailDiffuse" fileId="45"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="46"/>
+      <Texture fileId="62"/>
+      <Normalmap fileId="63"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Decals_decal_01_mat" materialId="53" customShaderId="32" customShaderVariation="vmaskUV2_normalUV3">
+      <CustomParameter name="alphaBlendingClipThreshold" value="1"/>
+      <Custommap name="detailDiffuse" fileId="56"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="64"/>
+      <Texture fileId="62"/>
+      <Normalmap fileId="63"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Decals_silverScratched_02_mat" materialId="11" customShaderId="32" customShaderVariation="vmaskUV2_normalUV3">
+      <CustomParameter name="alphaBlendingClipThreshold" value="1"/>
+      <Custommap name="detailDiffuse" fileId="45"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="46"/>
+      <Texture fileId="62"/>
+      <Normalmap fileId="63"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="dairyFeedF4500Decals_decal_02_mat" materialId="12" customShaderId="32" customShaderVariation="vmaskUV2_normalUV3">
+      <CustomParameter name="alphaBlendingClipThreshold" value="1"/>
+      <Custommap name="detailDiffuse" fileId="56"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="64"/>
+      <Texture fileId="62"/>
+      <Normalmap fileId="63"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="dairyFeedF4500Alpha_metalGalvanized_mat" materialId="51" customShaderId="32" alphaBlending="true">
+      <CustomParameter name="alphaBlendingClipThreshold" value="1"/>
+      <Custommap name="detailDiffuse" fileId="39"/>
+      <Custommap name="detailNormal" fileId="40"/>
+      <Custommap name="detailSpecular" fileId="41"/>
+      <Texture fileId="65"/>
+      <Normalmap fileId="66"/>
+      <Glossmap fileId="67"/>
+    </Material>
+    <Material name="dairyFeedF4500LoadingStation_plasticGraniteGrainSmall_02_mat" materialId="10" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.4436 0.06521 0.06521"/>
+      <Custommap name="detailDiffuse" fileId="49"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="50"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="30"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_copperScratched_mat" materialId="39" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.9559 0.3467 0.2384"/>
+      <Custommap name="detailDiffuse" fileId="68"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="69"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeedF4500Alpha_metalPaintedBlack_mat" materialId="52" customShaderId="32" alphaBlending="true">
+      <CustomParameter name="alphaBlendingClipThreshold" value="1"/>
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <Custommap name="detailDiffuse" fileId="47"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="48"/>
+      <Texture fileId="65"/>
+      <Normalmap fileId="66"/>
+      <Glossmap fileId="67"/>
+    </Material>
+    <Material name="dairyFeedF4500Belt_metalPainted_mat" materialId="55" customShaderId="32" customShaderVariation="meshScroll">
+      <CustomParameter name="colorScale" value="0 0.19 0.12"/>
+      <CustomParameter name="lengthAndRadius" value="5.567 0.083 0 0"/>
+      <Custommap name="detailDiffuse" fileId="47"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="48"/>
+      <Texture fileId="59"/>
+      <Normalmap fileId="60"/>
+      <Glossmap fileId="61"/>
+    </Material>
+    <Material name="dairyFeedF4500Magazine_plasticPainted_03_mat" materialId="56" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.007519 0.007519 0.007519"/>
+      <Custommap name="detailDiffuse" fileId="33"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="35"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
+    </Material>
+    <Material name="dairyFeed_chrome_01_mat" materialId="15" customShaderId="32">
+      <CustomParameter name="clearCoatIntensity" value="1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.8447"/>
+      <CustomParameter name="colorScale" value="0.0185 0.3189 0.2915"/>
+      <CustomParameter name="metalnessScale" value="0"/>
+      <CustomParameter name="smoothnessScale" value="0.559"/>
+      <Custommap name="detailDiffuse" fileId="56"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="57"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="70"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeed_plasticPainted_01_mat" materialId="16" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.8902 0.1804 0.1686"/>
+      <Custommap name="detailDiffuse" fileId="33"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="35"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="70"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeed_plasticPainted_02_mat" materialId="17" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.2314 0.5255 0.8902"/>
+      <Custommap name="detailDiffuse" fileId="33"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="35"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="70"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeed_plasticPaintedBlack_01_mat" materialId="18" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <Custommap name="detailDiffuse" fileId="33"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="35"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="70"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeed_chrome_02_mat" materialId="19" customShaderId="32">
+      <Custommap name="detailDiffuse" fileId="56"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="57"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="70"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeed_silverScratched_mat" materialId="20" customShaderId="32">
+      <Custommap name="detailDiffuse" fileId="45"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="46"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="70"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeed_metalPaintedBlack_mat" materialId="21" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <Custommap name="detailDiffuse" fileId="47"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="48"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="70"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeed_rubberBlack_mat" materialId="14" customShaderId="32">
+      <CustomParameter name="porosity" value="0.5"/>
+      <Custommap name="detailDiffuse" fileId="58"/>
+      <Custommap name="detailNormal" fileId="37"/>
+      <Custommap name="detailSpecular" fileId="38"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="70"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeedDecal_silverScratched_mat" materialId="25" customShaderId="32" customShaderVariation="vmaskUV2_normalUV3">
+      <Custommap name="detailDiffuse" fileId="45"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="46"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="72"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeedDecal_decal_alphaBlending_mat" materialId="29" customShaderId="32" customShaderVariation="vmaskUV2_normalUV3" alphaBlending="true">
+      <Custommap name="detailDiffuse" fileId="56"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="64"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="72"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeedDecal_calibratedPaint_mat" materialId="30" customShaderId="32" customShaderVariation="vmaskUV2_normalUV3" alphaBlending="true">
+      <CustomParameter name="clearCoatIntensity" value="0.1000"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2000"/>
+      <CustomParameter name="smoothnessScale" value="0.8500"/>
+      <Custommap name="detailDiffuse" fileId="73"/>
+      <Custommap name="detailNormal" fileId="74"/>
+      <Custommap name="detailSpecular" fileId="75"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="72"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeedHoses_rubberBlackHoses_mat" materialId="31" customShaderId="32" customShaderVariation="vmaskUV2">
+      <CustomParameter name="colorScale" value="0.01 0.01 0.01"/>
+      <CustomParameter name="porosity" value="0.5"/>
+      <Custommap name="detailDiffuse" fileId="58"/>
+      <Custommap name="detailNormal" fileId="37"/>
+      <Custommap name="detailSpecular" fileId="38"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="76"/>
+    </Material>
+    <Material name="dairyFeedBelt_rubberBlack_mat" materialId="26" customShaderId="32" customShaderVariation="uvTransform">
+      <CustomParameter name="porosity" value="0.5"/>
+      <Custommap name="detailDiffuse" fileId="58"/>
+      <Custommap name="detailNormal" fileId="37"/>
+      <Custommap name="detailSpecular" fileId="38"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="77"/>
+      <Glossmap fileId="78"/>
+    </Material>
+    <Material name="dairyFeed_plasticPaintedBlack_02_mat" materialId="22" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <CustomParameter name="smoothnessScale" value="2"/>
+      <Custommap name="detailDiffuse" fileId="33"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="35"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="70"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeed_plasticPainted_03_mat" materialId="23" customShaderId="32">
+      <CustomParameter name="colorScale" value="0.89 0.8259 0.05696"/>
+      <Custommap name="detailDiffuse" fileId="33"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="35"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="70"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeed_metalGalvanized_mat" materialId="24" customShaderId="32">
+      <Custommap name="detailDiffuse" fileId="39"/>
+      <Custommap name="detailNormal" fileId="40"/>
+      <Custommap name="detailSpecular" fileId="41"/>
+      <Texture fileId="29"/>
+      <Normalmap fileId="70"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="dairyFeedDecal_decal_opaque_mat" materialId="33" customShaderId="32" customShaderVariation="vmaskUV2_normalUV3">
+      <Custommap name="detailDiffuse" fileId="56"/>
+      <Custommap name="detailNormal" fileId="34"/>
+      <Custommap name="detailSpecular" fileId="64"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="72"/>
+      <Glossmap fileId="71"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="pigFeedRobot.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="dairyFeedSystem" lockedgroup="true" clipDistance="350" nodeId="1">
+      <TransformGroup name="chargingStation" translation="8.016499 0.015966 -0.684889" nodeId="2">
+        <TransformGroup name="loadingStation_lod" lodDistance="0 50" nodeId="3">
+          <TransformGroup name="LOD0" nodeId="4">
+            <Shape name="loadingStation" rotation="0.000037 0.000014 0" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1,2,3,4,5,6,7,8,9,10" nodeId="5"/>
+            <Shape name="loadingStation_decals" rotation="-90 -89.999992 0" shapeId="2" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="11,12" nodeId="6"/>
+          </TransformGroup>
+          <TransformGroup name="LOD1" nodeId="7">
+            <Shape name="loadingStation" rotation="0.000037 0.000014 0" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1,2,3,4,5,6,7,8,10" nodeId="8"/>
+            <Shape name="loadingStation_decals" rotation="-90 -89.999992 0" shapeId="4" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="12" nodeId="9"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Shape name="collision" translation="-0.280647 1.168346 0" shapeId="5" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="10"/>
+      </TransformGroup>
+      <Shape name="dairyFeedRobot" translation="7.755 0.01 1.583231" rotation="0 180 0" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="14,15,16,17,18,19,20,21,22,23,24" nodeId="11">
+        <TransformGroup name="animatedParts" nodeId="12">
+          <Shape name="wheels" translation="0 0.220766 -0.001345" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="14,20" nodeId="13">
+            <Shape name="screw_decals" translation="0 0.001381 -0.000116" shapeId="8" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="25" nodeId="14"/>
+          </Shape>
+          <Shape name="doorRight" translation="0.630275 1.109987 0.886518" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="20,14" nodeId="15">
+            <Shape name="screw_decals" translation="-0.011091 -0.063052 -0.018924" shapeId="10" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="25" nodeId="16"/>
+          </Shape>
+          <Shape name="doorLeft" translation="-0.630275 1.109987 0.886518" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="20,14" nodeId="17">
+            <Shape name="screw_decals" translation="0.011091 -0.063052 -0.018762" shapeId="12" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="25" nodeId="18"/>
+          </Shape>
+          <Shape name="mixer" translation="-0.000002 1.843093 0.053502" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="20" nodeId="19">
+            <Shape name="screw_decals" translation="-0.083493 -0.630306 0.042922" shapeId="14" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="25" nodeId="20"/>
+          </Shape>
+          <Shape name="belt" translation="0 0.677721 0.823001" shapeId="15" castsShadows="true" receiveShadows="true" materialIds="26" nodeId="21"/>
+        </TransformGroup>
+        <TransformGroup name="effects" nodeId="22">
+          <Shape name="effectGrainDoorRight" translation="0.664915 0.729733 0.814212" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="27" nodeId="23"/>
+          <Shape name="effectSmokeDoorRight" translation="0.614194 0.729733 0.814212" shapeId="17" castsShadows="true" receiveShadows="true" materialIds="27" nodeId="24"/>
+          <Shape name="effectParticleDoorRight" translation="0.601262 0.812147 0.814212" rotation="0 0 -10.988808" shapeId="18" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="27" nodeId="25"/>
+        </TransformGroup>
+        <Shape name="fillVolume" translation="0 1.437082 0.053559" rotation="0 180 0" shapeId="19" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="28" nodeId="26"/>
+        <Shape name="collision" shapeId="20" kinematic="true" collisionFilterGroup="0x10004" collisionFilterMask="0xdffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="27"/>
+        <Shape name="geaTrigger" translation="0 1.022706 -0.044509" shapeId="21" kinematic="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x110000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="28"/>
+        <TransformGroup name="visuals" nodeId="29">
+          <Shape name="dairyFeed_decals" shapeId="22" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="29,30" nodeId="30"/>
+          <Shape name="dairyFeed_hoses" shapeId="23" castsShadows="true" receiveShadows="true" materialIds="31" nodeId="31"/>
+          <Shape name="dairyFeed_buttonGlow_decals" translation="0 1.153569 -1.601895" shapeId="24" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="32" nodeId="32"/>
+          <Shape name="screw_decals" translation="0 1.145146 -0.023245" shapeId="25" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="33,25" nodeId="33"/>
+          <TransformGroup name="refernces" nodeId="34">
+            <ReferenceNode name="sideMarker20White_01" translation="-0.346593 1.9648 1.254525" scale="0.442678 0.442678 0.442678" referenceId="1" referenceRuntimeLoaded="false" nodeId="35"/>
+            <ReferenceNode name="sideMarker20Red_01" translation="-0.396141 1.98621 1.199405" scale="0.442678 0.442678 0.442678" referenceId="2" referenceRuntimeLoaded="false" nodeId="36"/>
+            <ReferenceNode name="sideMarker20White_02" translation="0.346593 1.9648 1.254525" scale="0.442678 0.442678 0.442678" referenceId="1" referenceRuntimeLoaded="false" nodeId="37"/>
+            <ReferenceNode name="sideMarker20Red_02" translation="0.395332 1.98563 1.198542" scale="0.442678 0.442678 0.442678" referenceId="2" referenceRuntimeLoaded="false" nodeId="38"/>
+            <ReferenceNode name="sideMarker20White_03" translation="-0.360166 1.917264 -1.411296" scale="0.442678 0.442678 0.442678" referenceId="1" referenceRuntimeLoaded="false" nodeId="39"/>
+            <ReferenceNode name="sideMarker20Orange_01" translation="-0.415075 1.925902 -1.356583" scale="0.442678 0.442678 0.442678" referenceId="3" referenceRuntimeLoaded="false" nodeId="40"/>
+            <ReferenceNode name="sideMarker20White_04" translation="0.360166 1.917264 -1.411296" scale="0.442678 0.442678 0.442678" referenceId="1" referenceRuntimeLoaded="false" nodeId="41"/>
+            <ReferenceNode name="sideMarker20Orange_02" translation="0.415075 1.925902 -1.356583" scale="0.442678 0.442678 0.442678" referenceId="3" referenceRuntimeLoaded="false" nodeId="42"/>
+          </TransformGroup>
+        </TransformGroup>
+      </Shape>
+      <TransformGroup name="unloadingSpots" nodeId="43">
+        <TransformGroup name="unloadingSpotSilage" translation="4.8 0.244703 0" nodeId="44">
+          <TransformGroup name="magazine_lod" rotation="0 180 0" lodDistance="0 50" nodeId="45">
+            <TransformGroup name="LOD0" nodeId="46">
+              <Shape name="magazine" rotation="-90.000031 0 89.999992" shapeId="26" castsShadows="true" receiveShadows="true" materialIds="34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49" nodeId="47"/>
+              <Shape name="silageRoll01" translation="0 3.435184 -3.493797" shapeId="27" castsShadows="true" receiveShadows="true" materialIds="35,36" nodeId="48">
+                <Shape name="roll01_decals" translation="0 -3.493797 -3.435184" shapeId="28" castsShadows="true" receiveShadows="true" materialIds="50" nodeId="49"/>
+              </Shape>
+              <Shape name="silageRoll02" translation="0 3.007417 -3.791602" rotation="-0.000004 0 0" shapeId="29" castsShadows="true" receiveShadows="true" materialIds="35,36" nodeId="50">
+                <Shape name="roll02_decals" translation="0 -3.007417 3.791602" rotation="-179.999985 0 0" shapeId="30" castsShadows="true" receiveShadows="true" materialIds="50" nodeId="51"/>
+              </Shape>
+              <Shape name="alpha" translation="0 1.68971 -1.536796" rotation="0.000016 0 0" shapeId="31" castsShadows="false" receiveShadows="true" materialIds="51,52" nodeId="52"/>
+              <Shape name="magazine_decals" translation="0.041666 1.55427 -1.637818" rotation="179.999908 -67.580261 -89.999977" shapeId="32" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="50,53" nodeId="53"/>
+              <Shape name="silageScraperFloor" translation="0 0.561662 1.130666" rotation="157.499817 0 -180" shapeId="33" castsShadows="true" receiveShadows="true" materialIds="54,55" nodeId="54"/>
+            </TransformGroup>
+            <TransformGroup name="LOD1" nodeId="55">
+              <Shape name="cylinder1" rotation="-90.000008 0 0" shapeId="34" castsShadows="true" receiveShadows="true" materialIds="35,36" nodeId="56"/>
+              <Shape name="magazine_decals" rotation="179.999908 -67.580261 -89.999977" shapeId="35" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="53" nodeId="57"/>
+              <Shape name="magazine" rotation="-90.000031 0 89.999992" shapeId="36" castsShadows="true" receiveShadows="true" materialIds="34,35,43,36,37,38,39,40,41,42,44,45,56,47,48,49" nodeId="58"/>
+              <Shape name="cylinder2" rotation="-0.000004 0 0" shapeId="37" castsShadows="true" receiveShadows="true" materialIds="35,36" nodeId="59"/>
+            </TransformGroup>
+          </TransformGroup>
+          <Shape name="fillVolumeSilage" translation="-0.000956 2.24002 0.898739" rotation="-22.44775 -0.000035 0.000014" shapeId="38" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="60"/>
+          <Shape name="exactFillRootNodeSilage" translation="0 2.329682 0.677733" rotation="0 180 0" shapeId="39" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="61"/>
+          <Shape name="baleTriggerSilage" translation="0 2.329682 0.677733" rotation="0 180 0" shapeId="40" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x40000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="62"/>
+          <Shape name="collisionSilage" translation="0 0 0.923384" rotation="0 180 0" shapeId="41" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="63"/>
+          <Shape name="exactFillRootNodeSilageGround" translation="0 -0.379524 -4.660693" scale="1 1 2" shapeId="42" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="64"/>
+          <TransformGroup name="silageSoundNode" translation="0 3.202446 3.662483" nodeId="65"/>
+          <TransformGroup name="effects" translation="0 2.179795 4.266227" nodeId="66">
+            <Shape name="silageEffectParticle" shapeId="43" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="27" nodeId="67"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="unloadingSpotStraw" translation="1.6 0.244703 0" nodeId="68">
+          <TransformGroup name="magazine_lod3" rotation="0 180 0" lodDistance="0 50" nodeId="69">
+            <TransformGroup name="LOD0" nodeId="70">
+              <Shape name="magazine" rotation="-90.000031 0 89.999992" shapeId="26" castsShadows="true" receiveShadows="true" materialIds="34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49" nodeId="71"/>
+              <Shape name="strawRoll01" translation="0 3.435184 -3.493797" rotation="-90.000008 0 0" shapeId="27" castsShadows="true" receiveShadows="true" materialIds="35,36" nodeId="72">
+                <Shape name="roll01_decals" translation="0 -3.493797 -3.435184" shapeId="28" castsShadows="true" receiveShadows="true" materialIds="50" nodeId="73"/>
+              </Shape>
+              <Shape name="strawRoll02" translation="0 3.007417 -3.791602" rotation="-0.000004 0 0" shapeId="29" castsShadows="true" receiveShadows="true" materialIds="35,36" nodeId="74">
+                <Shape name="roll02_decals" translation="0 -3.007417 3.791602" rotation="-179.999985 0 0" shapeId="30" castsShadows="true" receiveShadows="true" materialIds="50" nodeId="75"/>
+              </Shape>
+              <Shape name="alpha" translation="0 1.68971 -1.536796" rotation="0.000016 0 0" shapeId="31" castsShadows="false" receiveShadows="true" materialIds="51,52" nodeId="76"/>
+              <Shape name="magazine_decals" translation="0.041666 1.55427 -1.637818" rotation="179.999908 -67.580261 -89.999977" shapeId="32" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="50,53" nodeId="77"/>
+              <Shape name="strawScraperFloor" translation="0 0.561662 1.130666" rotation="157.499817 0 -180" shapeId="33" castsShadows="true" receiveShadows="true" materialIds="54,55" nodeId="78"/>
+            </TransformGroup>
+            <TransformGroup name="LOD1" nodeId="79">
+              <Shape name="cylinder1" rotation="-90.000008 0 0" shapeId="34" castsShadows="true" receiveShadows="true" materialIds="35,36" nodeId="80"/>
+              <Shape name="magazine_decals" rotation="179.999908 -67.580261 -89.999977" shapeId="35" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="53" nodeId="81"/>
+              <Shape name="magazine" rotation="-90.000031 0 89.999992" shapeId="36" castsShadows="true" receiveShadows="true" materialIds="34,35,43,36,37,38,39,40,41,42,44,45,56,47,48,49" nodeId="82"/>
+              <Shape name="cylinder2" rotation="-0.000004 0 0" shapeId="37" castsShadows="true" receiveShadows="true" materialIds="35,36" nodeId="83"/>
+            </TransformGroup>
+          </TransformGroup>
+          <Shape name="exactFillRootNodeStraw" translation="0 2.329682 0.677733" rotation="0 180 0" shapeId="44" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="84"/>
+          <Shape name="baleTriggerStraw" translation="0 2.329682 0.677733" rotation="0 180 0" shapeId="45" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x40000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="85"/>
+          <Shape name="fillVolumeStraw" translation="-0.002658 2.24002 0.898739" rotation="-22.44775 -0.000035 0.000014" shapeId="46" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="86"/>
+          <Shape name="collisionStraw" translation="0 0 0.923384" rotation="0 180 0" shapeId="47" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="87"/>
+          <Shape name="exactFillRootNodeStrawGround" translation="0 -0.379524 -4.660693" scale="1 1 2" shapeId="48" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="88"/>
+          <TransformGroup name="strawSoundNode" translation="0 3.202446 3.662483" nodeId="89"/>
+          <TransformGroup name="effects" translation="0 2.179795 4.266227" nodeId="90">
+            <Shape name="strawEffectParticle" shapeId="49" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="27" nodeId="91"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="unloadingSpotHay" translation="-1.6 0.244703 0" nodeId="92">
+          <TransformGroup name="magazine_lod4" rotation="0 180 0" lodDistance="0 50" nodeId="93">
+            <TransformGroup name="LOD0" nodeId="94">
+              <Shape name="magazine" rotation="-90.000031 0 89.999992" shapeId="26" castsShadows="true" receiveShadows="true" materialIds="34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49" nodeId="95"/>
+              <Shape name="hayRoll01" translation="0 3.435184 -3.493797" rotation="-90.000008 0 0" shapeId="27" castsShadows="true" receiveShadows="true" materialIds="35,36" nodeId="96">
+                <Shape name="roll01_decals" translation="0 -3.493797 -3.435184" shapeId="28" castsShadows="true" receiveShadows="true" materialIds="50" nodeId="97"/>
+              </Shape>
+              <Shape name="hayRoll02" translation="0 3.007417 -3.791602" rotation="-0.000004 0 0" shapeId="29" castsShadows="true" receiveShadows="true" materialIds="35,36" nodeId="98">
+                <Shape name="roll02_decals" translation="0 -3.007417 3.791602" rotation="-179.999985 0 0" shapeId="30" castsShadows="true" receiveShadows="true" materialIds="50" nodeId="99"/>
+              </Shape>
+              <Shape name="alpha" translation="0 1.68971 -1.536796" rotation="0.000016 0 0" shapeId="31" castsShadows="false" receiveShadows="true" materialIds="51,52" nodeId="100"/>
+              <Shape name="magazine_decals" translation="0.041666 1.55427 -1.637818" rotation="179.999908 -67.580261 -89.999977" shapeId="32" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="50,53" nodeId="101"/>
+              <Shape name="hayScraperFloor" translation="0 0.561662 1.130666" rotation="157.499817 0 -180" shapeId="33" castsShadows="true" receiveShadows="true" materialIds="54,55" nodeId="102"/>
+            </TransformGroup>
+            <TransformGroup name="LOD1" nodeId="103">
+              <Shape name="cylinder1" rotation="-90.000008 0 0" shapeId="34" castsShadows="true" receiveShadows="true" materialIds="35,36" nodeId="104"/>
+              <Shape name="magazine_decals" rotation="179.999908 -67.580261 -89.999977" shapeId="35" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="53" nodeId="105"/>
+              <Shape name="magazine" rotation="-90.000031 0 89.999992" shapeId="36" castsShadows="true" receiveShadows="true" materialIds="34,35,43,36,37,38,39,40,41,42,44,45,56,47,48,49" nodeId="106"/>
+              <Shape name="cylinder2" rotation="-0.000004 0 0" shapeId="37" castsShadows="true" receiveShadows="true" materialIds="35,36" nodeId="107"/>
+            </TransformGroup>
+          </TransformGroup>
+          <Shape name="exactFillRootNodeHay" translation="0 2.329682 0.677733" rotation="0 180 0" shapeId="50" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="108"/>
+          <Shape name="baleTriggerHay" translation="0 2.329682 0.677733" rotation="0 180 0" shapeId="51" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x40000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="109"/>
+          <Shape name="fillVolumeHay" translation="-0.002658 2.24002 0.898739" rotation="-22.44775 -0.000035 0.000014" shapeId="52" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="110"/>
+          <Shape name="collisionJHay" translation="0 0 0.923384" rotation="0 180 0" shapeId="53" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="111"/>
+          <Shape name="exactFillRootNodeHayGround" translation="0 -0.379524 -4.660693" scale="1 1 2" shapeId="54" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="112"/>
+          <TransformGroup name="haySoundNode" translation="0 3.202446 3.662483" nodeId="113"/>
+          <TransformGroup name="effects" translation="0 2.179795 4.266227" nodeId="114">
+            <Shape name="hayEffectParticle" shapeId="55" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="27" nodeId="115"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="unloadingSpotMineralFeed" translation="-5.424682 0.244703 0" nodeId="116">
+          <TransformGroup name="effects" translation="0.065317 2.12095 4.154161" nodeId="117">
+            <Shape name="dischargeEffect" rotation="90 0 0" shapeId="56" castsShadows="true" receiveShadows="true" materialIds="57" clipDistance="300" nodeId="118"/>
+            <Shape name="dischargeEffectSmoke" translation="0 -1.982873 0" shapeId="57" castsShadows="true" receiveShadows="true" materialIds="57" clipDistance="100" nodeId="119"/>
+          </TransformGroup>
+          <Shape name="palletTriggerMineralFeed" translation="-0.183521 -0.259298 -2.875067" shapeId="58" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="120"/>
+          <Shape name="exactFillRootNodeMineralFeedGround" translation="0 -0.379524 -4.660693" scale="1 1 2" shapeId="59" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="121"/>
+          <TransformGroup name="mineralFeedSoundNode" translation="0 0.299259 1.409345" nodeId="122"/>
+        </TransformGroup>
+        <Shape name="warningStripesTerrainDecal" translation="-4.8 0.01 -4.660167" scale="1 1 2" shapeId="60" castsShadows="false" receiveShadows="true" nonRenderable="true" terrainDecal="true" materialIds="58" nodeId="123"/>
+        <Shape name="warningStripesDecal" translation="0.00065 0.02 -1.945192" shapeId="61" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="58" nodeId="124"/>
+        <Shape name="iconSilageDecal" translation="4.8 0.022367 -2.801386" rotation="0 -90 0" shapeId="62" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="59" nodeId="125"/>
+        <Shape name="iconStrawDecal" translation="1.6 0.022367 -2.801386" rotation="0 -90 0" shapeId="63" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="60" nodeId="126"/>
+        <Shape name="iconHayDecal" translation="-1.6 0.022367 -2.801386" rotation="0 -90 0" shapeId="64" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="61" nodeId="127"/>
+        <Shape name="iconMineralFeedDecal" translation="-5.424682 0.022367 -2.801386" rotation="0 -90 0" shapeId="65" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="62" nodeId="128"/>
+      </TransformGroup>
+      <Shape name="playerDetectionTrigger" translation="1.610168 2.674382 -0.464933" shapeId="66" kinematic="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x110000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="129"/>
+      <TransformGroup name="visuals_karma" translation="-5.382382 0 1.424161" rotation="0 180 0" nodeId="130">
+        <TransformGroup name="visuals_lod" lodDistance="0 80" nodeId="131">
+          <TransformGroup name="uniaKarma16_lod0" nodeId="132">
+            <Shape name="uniaKarma16_vis" shapeId="67" castsShadows="true" receiveShadows="true" materialIds="63" clipDistance="300" nodeId="133"/>
+            <Shape name="screws" translation="0.000004 1.822318 0.073637" shapeId="68" castsShadows="true" receiveShadows="true" materialIds="64" clipDistance="30" nodeId="134"/>
+            <Shape name="stickers" translation="-0.214866 1.893896 0.111416" shapeId="69" castsShadows="true" receiveShadows="true" materialIds="65" clipDistance="30" nodeId="135"/>
+          </TransformGroup>
+          <TransformGroup name="uniaKarma16_lod1" nodeId="136">
+            <Shape name="karmaLOD" shapeId="70" castsShadows="true" receiveShadows="true" materialIds="63" clipDistance="500" nodeId="137"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Shape name="logo" translation="-0.001928 7.946301 1.095015" shapeId="71" castsShadows="true" receiveShadows="true" materialIds="66" clipDistance="80" nodeId="138"/>
+        <Shape name="pipe" translation="-0.024043 1.092505 -0.697806" rotation="-90.000343 -47.557697 90.000465" shapeId="72" castsShadows="true" receiveShadows="true" materialIds="63" clipDistance="300" nodeId="139"/>
+      </TransformGroup>
+      <TransformGroup name="visual_lod" lockedgroup="true" translation="2.123888 0 0" lodDistance="0 70" nodeId="140">
+        <Shape name="garageVis_lod0" translation="-6.468566 -0.255 4.065958" shapeId="73" castsShadows="true" receiveShadows="true" materialIds="67" nodeId="141">
+          <Shape name="garageVis_lod0" translation="8.383928 3.993 -2.497753" shapeId="74" castsShadows="true" receiveShadows="true" materialIds="67" nodeId="142"/>
+        </Shape>
+        <Shape name="garageVis_lod1" translation="-6.468566 -0.255 4.065958" shapeId="75" castsShadows="true" receiveShadows="true" materialIds="67" nodeId="143">
+          <Shape name="garageVis_lod1" translation="8.383927 4.021344 -2.504187" shapeId="76" castsShadows="true" receiveShadows="true" materialIds="67" nodeId="144"/>
+        </Shape>
+      </TransformGroup>
+      <TransformGroup name="collisions" nodeId="145">
+        <Shape name="collision" translation="2.398402 3.949867 1.49036" rotation="0 180 0" shapeId="77" static="true" collisionFilterGroup="0x1034" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13" nodeId="146"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+  </UserAttributes>
+</i3D>

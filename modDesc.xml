@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="99" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
+    <author>Fennell</author>
+    <version>1.0.0.10</version>
+    <title>
+        <en>Pig Barn With Feeding Robot (GEA)</en>
+    </title>
+    <description>
+        <en><![CDATA[The big Hörmann barn with the GEA feeding robot, converted for pigs.
+
+Fill the robot's four hoppers and the barn is fed from them every hour:
+- Silo outside: base feed (corn or sorghum), 50%
+- Grain bin: grains (wheat or barley), 25%
+- Protein bin: protein (soybeans, canola or sunflowers), 20%
+- Root crop bin: root crops (potatoes or sugar beet), 5%
+Each hopper takes every crop of its group, including the ones your map adds, and nothing else.
+Each group feeds its own share, so an empty hopper only stops that part of the diet.
+
+Bought-in Pig Food is tipped straight into the feed alley inside the barn, like TMR in the cow barn. The robot only mixes crops.
+Loose pig crops can go into the feed alley too.
+
+Manure is stored in the barn and loads at the slurry point. A manure heap nearby adds storage.
+
+Straw bales can be dropped in the feed alley; they go into the straw storage.
+The barn's info box shows how long each hopper and the straw last, and you get a warning when one runs low (under a month left) or empty.
+
+Price: 800,000
+Upkeep: 700 / day
+Pigs: up to 1500
+Food: 800,000 l
+Straw: 1,000,000 l
+Liquid manure: 1,500,000 l
+Manure: 1,200,000 l
+Protein bin: 400,000 l
+Root crop bin: 120,000 l
+Grain bin: 500,000 l
+Base feed silo: 1,000,000 l
+Robot mixer: 30,000 l
+Automatic water supply]]></en>
+    </description>
+
+    <iconFilename>icon_pigBarnRobot.dds</iconFilename>
+    <multiplayer supported="true"/>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/PigFeedRecipe.lua"/>
+    </extraSourceFiles>
+
+    <placeableSpecializations>
+        <specialization name="pigFeedRobot" className="PlaceablePigFeedRobot" filename="scripts/PlaceablePigFeedRobot.lua" />
+    </placeableSpecializations>
+
+    <placeableTypes>
+        <type name="pigHusbandryFeedingRobot" parent="baseHusbandry" className="Placeable" filename="$dataS/scripts/placeables/Placeable.lua">
+            <specialization name="husbandryLiquidManure" />
+            <specialization name="husbandryWater" />
+            <specialization name="husbandryStraw" />
+            <specialization name="husbandryMeadow" />
+            <specialization name="husbandryFeedingRobot" />
+            <specialization name="pigFeedRobot" />
+        </type>
+    </placeableTypes>
+
+    <storeItems>
+        <storeItem xmlFilename="placeables/pigBarnRobot.xml"/>
+    </storeItems>
+
+    <l10n>
+        <text name="storeItem_pigBarnRobot">
+            <en>Pig Barn With Feeding Robot (GEA)</en>
+        </text>
+        <text name="function_pigBarnRobot">
+            <en>GEA feeding robot that mixes pig feed from your crops. Up to 1500 pigs.</en>
+        </text>
+    </l10n>
+</modDesc>

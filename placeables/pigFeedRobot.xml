@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<feedingRobot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/feedingRobot.xsd">
+    <!-- copy of the GEA robot with pig feed bunker signs -->
+    <filename>placeables/pigFeedRobot.i3d</filename>
+
+    <robot node="dairyFeedRobot" triggerNode="geaTrigger" maxSpeed="5" acceleration="1" deceleration="2">
+        <door node="doorRight" duration="1" maxRotZ="50" />
+        <!-- PIGFOOD recipe is registered by scripts/PigFeedRecipe.lua -->
+        <mixer recipe="PIGFOOD">
+            <animationNodes>
+                <animationNode node="mixer" rotSpeed="-180" rotAxis="2" />
+            </animationNodes>
+        </mixer>
+        <!-- 1500 pigs eat ~7500 l/h and the barn asks the robot for 1.5x that per run -->
+        <fillPlane node="fillVolume" capacity="30000" />
+        <dischargeEffects>
+            <effectNode effectNode="effectGrainDoorRight" materialType="unloading" materialTypeId="1" defaultFillType="pigFood" delay="0" fadeInTime="0.5" fadeOutTime="0.1" extraDistance="0"/>
+            <effectNode effectNode="effectSmokeDoorRight" materialType="unloadingSmoke" fadeTime="0.5" />
+            <effectNode effectNode="effectParticleDoorRight" materialType="unloadingParticle" effectClass="ParticleEffect"/>
+        </dischargeEffects>
+        <sounds>
+            <driving template="feedingRobotLoop" linkNode="dairyFeedRobot" volumeScale="1.2"/>
+            <discharging template="manureFill" volumeScale="2.1" linkNode="dairyFeedRobot" innerRadius="3" outerRadius="15" />
+        </sounds>
+    </robot>
+
+    <playerTrigger node="playerDetectionTrigger" />
+
+    <unloadingSpots>
+        <!-- Robot stops, one pig food group each: protein bin, root crop bin, grain bin, base feed silo.
+             PlaceablePigFeedRobot.lua points these unload triggers at its own hopper storage, which takes every crop
+             of the group, and feeds the barn from it every hour. The robot's own spot storage below stays unused;
+             the fillTypes here only name each stop. Premade PIGFOOD goes into the feed alley inside the barn. -->
+        <!-- 1: protein (bin, was silage) -->
+        <unloadingSpot capacity="400000" fillTypes="SOYBEAN" markerNode="iconSilageDecal">
+            <unloadTrigger exactFillRootNode="exactFillRootNodeSilage"/>
+            <unloadTrigger exactFillRootNode="exactFillRootNodeSilageGround"/>
+            <fillVolume node="fillVolumeSilage" />
+            <dischargeAnimationNodes>
+                <animationNode node="silageRoll01" rotSpeed="500" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+                <animationNode node="silageRoll02" rotSpeed="-500" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+                <animationNode node="silageScraperFloor" class="ScrollingAnimation" shaderParameterName="scrollPos" scrollSpeed="0.014" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            </dischargeAnimationNodes>
+            <sounds>
+                <discharging file="$data/placeables/gea/dairyFeedF4500/sounds/silageFillGea.wav" linkNode="silageSoundNode" supportsReverb="false" fadeIn="0.2" fadeOut="0.2" innerRadius="5" outerRadius="18">
+                    <volume indoor="0.8" outdoor="1.8"/>
+                    <lowpassCutoffFrequency indoor="500" outdoor="20000"/>
+                    <lowpassGain indoor="0.6" outdoor="1"/>
+                </discharging>
+            </sounds>
+            <dischargeEffects>
+                <effectNode effectNode="silageEffectParticle" materialType="unloadingParticle" effectClass="ParticleEffect"/>
+            </dischargeEffects>
+        </unloadingSpot>
+        <!-- 2: root crops (bin, was straw) -->
+        <unloadingSpot capacity="120000" fillTypes="POTATO" markerNode="iconStrawDecal">
+            <unloadTrigger exactFillRootNode="exactFillRootNodeStraw" />
+            <unloadTrigger exactFillRootNode="exactFillRootNodeStrawGround" />
+            <fillVolume node="fillVolumeStraw" />
+            <dischargeAnimationNodes>
+                <animationNode node="strawRoll01" rotSpeed="500" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+                <animationNode node="strawRoll02" rotSpeed="-500" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+                <animationNode node="strawScraperFloor" class="ScrollingAnimation" shaderParameterName="scrollPos" scrollSpeed="0.014" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            </dischargeAnimationNodes>
+            <sounds>
+                <discharging file="$data/placeables/gea/dairyFeedF4500/sounds/strawFillGea.wav"  linkNode="strawSoundNode" supportsReverb="false" fadeIn="0.2" fadeOut="0.2" innerRadius="5" outerRadius="18">
+                    <volume indoor="0.8" outdoor="1.8"/>
+                    <lowpassCutoffFrequency indoor="500" outdoor="20000"/>
+                    <lowpassGain indoor="0.6" outdoor="1"/>
+                </discharging>
+            </sounds>
+            <dischargeEffects>
+                <effectNode effectNode="strawEffectParticle" materialType="unloadingParticle" effectClass="ParticleEffect"/>
+            </dischargeEffects>
+        </unloadingSpot>
+        <!-- 3: grain (bin, was hay) -->
+        <unloadingSpot capacity="500000" fillTypes="WHEAT" markerNode="iconHayDecal">
+            <unloadTrigger exactFillRootNode="exactFillRootNodeHay" />
+            <unloadTrigger exactFillRootNode="exactFillRootNodeHayGround" />
+            <fillVolume node="fillVolumeHay" />
+            <dischargeAnimationNodes>
+                <animationNode node="hayRoll01" rotSpeed="500" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+                <animationNode node="hayRoll02" rotSpeed="-500" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+                <animationNode node="hayScraperFloor" class="ScrollingAnimation" shaderParameterName="scrollPos" scrollSpeed="0.014" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            </dischargeAnimationNodes>
+            <sounds>
+                <discharging file="$data/placeables/gea/dairyFeedF4500/sounds/hayFillGea.wav" linkNode="haySoundNode" supportsReverb="false" fadeIn="0.2" fadeOut="0.2" innerRadius="5" outerRadius="18">
+                    <volume indoor="0.8" outdoor="1.8"/>
+                    <lowpassCutoffFrequency indoor="500" outdoor="20000"/>
+                    <lowpassGain indoor="0.6" outdoor="1"/>
+                </discharging>
+            </sounds>
+            <dischargeEffects>
+                <effectNode effectNode="hayEffectParticle" materialType="unloadingParticle" effectClass="ParticleEffect"/>
+            </dischargeEffects>
+        </unloadingSpot>
+        <!-- 4: base feed, corn and sorghum (silo outside, was mineral feed) -->
+        <unloadingSpot capacity="1000000" fillTypes="MAIZE" markerNode="iconMineralFeedDecal">
+            <unloadTrigger exactFillRootNode="exactFillRootNodeMineralFeedGround" />
+            <sounds>
+                <discharging file="$data/placeables/gea/dairyFeedF4500/sounds/mineralFillGea.wav" linkNode="mineralFeedSoundNode" supportsReverb="false" fadeIn="0.2" fadeOut="0.2" innerRadius="5" outerRadius="18">
+                    <volume indoor="0.8" outdoor="1.8"/>
+                    <lowpassCutoffFrequency indoor="500" outdoor="20000"/>
+                    <lowpassGain indoor="0.6" outdoor="1"/>
+                </discharging>
+            </sounds>
+            <dischargeEffects>
+                <effectNode effectClass="PipeEffect" effectNode="dischargeEffect"      materialType="pipe"           fadeTime="0.5" maxBending="0" controlPoint="1.5 0 0 0" shapeScaleSpread="1 1 1 0"/>
+                <effectNode                          effectNode="dischargeEffectSmoke" materialType="unloadingSmoke" fadeTime="0.5" />
+            </dischargeEffects>
+        </unloadingSpot>
+    </unloadingSpots>
+
+    <stateMachine>
+        <states>
+            <state name="LOADING"                class="FeedingRobotStateLoading"/>
+            <state name="PAUSED"                 class="FeedingRobotStatePaused" />
+            <state name="RESET"                  class="FeedingRobotStateReset" />
+            <state name="DRIVE_TO_SILAGE"        class="FeedingRobotStateDriving" resetRobot="false" startMixingAnimation="false" stopMixingAnimation="false" startDriving="true"  stopDriving="false"/>
+            <state name="DRIVE_TO_STRAW"         class="FeedingRobotStateDriving" resetRobot="false" startMixingAnimation="true"  stopMixingAnimation="false" startDriving="false" stopDriving="false"/>
+            <state name="DRIVE_TO_HAY"           class="FeedingRobotStateDriving" resetRobot="false" startMixingAnimation="false" stopMixingAnimation="false" startDriving="false" stopDriving="false"/>
+            <state name="DRIVE_TO_MINERALFEED"   class="FeedingRobotStateDriving" resetRobot="false" startMixingAnimation="false" stopMixingAnimation="false" startDriving="false" stopDriving="false"/>
+            <state name="DRIVING"                class="FeedingRobotStateDriving" resetRobot="false" startMixingAnimation="false" stopMixingAnimation="true"  startDriving="false" stopDriving="true" />
+
+            <state name="WAIT_AFTER_SILAGE"      class="FeedingRobotStateWait" waitDuration="2" />
+            <state name="WAIT_AFTER_STRAW"       class="FeedingRobotStateWait" waitDuration="2" />
+            <state name="WAIT_AFTER_HAY"         class="FeedingRobotStateWait" waitDuration="2" />
+            <state name="WAIT_AFTER_MINERALFEED" class="FeedingRobotStateWait" waitDuration="2" />
+
+            <!-- deltaFillLevel only drives the mixer fill visual; amounts follow the 20 / 5 / 25 / 50 recipe of the 30000 l mixer -->
+            <state name="FILL_SILAGE"            class="FeedingRobotStateFilling" waitDuration="6" deltaFillLevel="6000"  unloadingSpotIndex="1"/>
+            <state name="FILL_STRAW"             class="FeedingRobotStateFilling" waitDuration="6" deltaFillLevel="1500"  unloadingSpotIndex="2"/>
+            <state name="FILL_HAY"               class="FeedingRobotStateFilling" waitDuration="6" deltaFillLevel="7500"  unloadingSpotIndex="3"/>
+            <state name="FILL_MINERALFEED"       class="FeedingRobotStateFilling" waitDuration="3" deltaFillLevel="15000" unloadingSpotIndex="4"/>
+            <state name="FINISHED"               class="FeedingRobotStateFinished" />
+        </states>
+        <transitions>
+            <transition from="LOADING"                to="PAUSED" />
+            <transition from="PAUSED"                 to="RESET" />
+            <transition from="RESET"                  to="DRIVE_TO_SILAGE" />
+            <transition from="DRIVE_TO_SILAGE"        to="FILL_SILAGE" />
+            <transition from="FILL_SILAGE"            to="WAIT_AFTER_SILAGE" />
+            <transition from="WAIT_AFTER_SILAGE"      to="DRIVE_TO_STRAW" />
+            <transition from="DRIVE_TO_STRAW"         to="FILL_STRAW" />
+            <transition from="FILL_STRAW"             to="WAIT_AFTER_STRAW" />
+            <transition from="WAIT_AFTER_STRAW"       to="DRIVE_TO_HAY" />
+            <transition from="DRIVE_TO_HAY"           to="FILL_HAY" />
+            <transition from="FILL_HAY"               to="WAIT_AFTER_HAY" />
+            <transition from="WAIT_AFTER_HAY"         to="DRIVE_TO_MINERALFEED" />
+            <transition from="DRIVE_TO_MINERALFEED"   to="FILL_MINERALFEED" />
+            <transition from="FILL_MINERALFEED"       to="WAIT_AFTER_MINERALFEED" />
+            <transition from="WAIT_AFTER_MINERALFEED" to="DRIVING" />
+            <transition from="DRIVING"                to="FINISHED" />
+            <transition from="FINISHED"               to="PAUSED" />
+        </transitions>
+    </stateMachine>
+
+    <i3dMappings>
+        <i3dMapping id="loadingStation_lod" node="0>0|0" />
+        <i3dMapping id="dairyFeedRobot" node="0>1" />
+        <i3dMapping id="wheels" node="0>1|0|0" />
+        <i3dMapping id="doorRight" node="0>1|0|1" />
+        <i3dMapping id="doorLeft" node="0>1|0|2" />
+        <i3dMapping id="mixer" node="0>1|0|3" />
+        <i3dMapping id="belt" node="0>1|0|4" />
+        <i3dMapping id="effectGrainDoorRight" node="0>1|1|0" />
+        <i3dMapping id="effectSmokeDoorRight" node="0>1|1|1" />
+        <i3dMapping id="effectParticleDoorRight" node="0>1|1|2" />
+        <i3dMapping id="fillVolume" node="0>1|2" />
+        <i3dMapping id="collision" node="0>1|3" />
+        <i3dMapping id="geaTrigger" node="0>1|4" />
+        <i3dMapping id="silageRoll01" node="0>2|0|0|0|1" />
+        <i3dMapping id="silageRoll02" node="0>2|0|0|0|2" />
+        <i3dMapping id="silageScraperFloor" node="0>2|0|0|0|5" />
+        <i3dMapping id="fillVolumeSilage" node="0>2|0|1" />
+        <i3dMapping id="exactFillRootNodeSilage" node="0>2|0|2" />
+        <i3dMapping id="baleTriggerSilage" node="0>2|0|3" />
+        <i3dMapping id="exactFillRootNodeSilageGround" node="0>2|0|5" />
+        <i3dMapping id="silageSoundNode" node="0>2|0|6" />
+        <i3dMapping id="silageEffectParticle" node="0>2|0|7|0" />
+        <i3dMapping id="strawRoll01" node="0>2|1|0|0|1" />
+        <i3dMapping id="strawRoll02" node="0>2|1|0|0|2" />
+        <i3dMapping id="strawScraperFloor" node="0>2|1|0|0|5" />
+        <i3dMapping id="exactFillRootNodeStraw" node="0>2|1|1" />
+        <i3dMapping id="baleTriggerStraw" node="0>2|1|2" />
+        <i3dMapping id="fillVolumeStraw" node="0>2|1|3" />
+        <i3dMapping id="exactFillRootNodeStrawGround" node="0>2|1|5" />
+        <i3dMapping id="strawSoundNode" node="0>2|1|6" />
+        <i3dMapping id="strawEffectParticle" node="0>2|1|7|0" />
+        <i3dMapping id="hayRoll01" node="0>2|2|0|0|1" />
+        <i3dMapping id="hayRoll02" node="0>2|2|0|0|2" />
+        <i3dMapping id="hayScraperFloor" node="0>2|2|0|0|5" />
+        <i3dMapping id="exactFillRootNodeHay" node="0>2|2|1" />
+        <i3dMapping id="baleTriggerHay" node="0>2|2|2" />
+        <i3dMapping id="fillVolumeHay" node="0>2|2|3" />
+        <i3dMapping id="exactFillRootNodeHayGround" node="0>2|2|5" />
+        <i3dMapping id="haySoundNode" node="0>2|2|6" />
+        <i3dMapping id="hayEffectParticle" node="0>2|2|7|0" />
+        <i3dMapping id="effects" node="0>2|3|0" />
+        <i3dMapping id="dischargeEffect" node="0>2|3|0|0" />
+        <i3dMapping id="dischargeEffectSmoke" node="0>2|3|0|1" />
+        <i3dMapping id="palletTriggerMineralFeed" node="0>2|3|1" />
+        <i3dMapping id="exactFillRootNodeMineralFeedGround" node="0>2|3|2" />
+        <i3dMapping id="mineralFeedSoundNode" node="0>2|3|3" />
+        <i3dMapping id="iconSilageDecal" node="0>2|6" />
+        <i3dMapping id="iconStrawDecal" node="0>2|7" />
+        <i3dMapping id="iconHayDecal" node="0>2|8" />
+        <i3dMapping id="iconMineralFeedDecal" node="0>2|9" />
+        <i3dMapping id="playerDetectionTrigger" node="0>3" />
+    </i3dMappings>
+</feedingRobot>
