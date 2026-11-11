@@ -66,7 +66,9 @@ Fill the robot's four hoppers and the barn is fed from them every hour:
 | Robot mixer | 30,000 l |
 | Water | Automatic supply |
 
-## Installation
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DTM-Mods/.github/main/assets/installation.jpg" alt="Installation" width="100%">
+</p>
 
 Put `FS25_PigBarnWithRobot.zip` in `Documents/My Games/FarmingSimulator2025/mods`. In multiplayer, install it on the server and on every player's game.
 
