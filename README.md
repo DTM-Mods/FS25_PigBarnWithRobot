@@ -66,6 +66,18 @@ Fill the robot's four hoppers and the barn is fed from them every hour:
 | Robot mixer | 30,000 l |
 | Water | Automatic supply |
 
+<!-- dtm-screenshots -->
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DTM-Mods/.github/main/assets/screenshots.jpg" alt="Screenshots" width="100%">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DTM-Mods/.github/main/assets/screens/FS25_PigBarnWithRobot/shop.jpg" alt="Pig Barn With Feeding Robot" width="100%">
+</p>
+
+<!-- /dtm-screenshots -->
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/DTM-Mods/.github/main/assets/installation.jpg" alt="Installation" width="100%">
 </p>
