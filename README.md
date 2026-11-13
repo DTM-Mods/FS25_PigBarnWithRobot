@@ -46,7 +46,7 @@ Fill the robot's four hoppers and the barn is fed from them every hour:
 - Bought-in Pig Food is tipped straight into the feed alley inside the barn, like TMR in the cow barn. The robot only mixes crops. Loose pig crops can go into the feed alley too.
 - Manure is stored in the barn and loads at the slurry point. A manure heap nearby adds storage.
 - Straw bales can be dropped in the feed alley; they go into the straw storage.
-- The barn's info box shows how long each hopper and the straw last, and you get a warning when one runs low (under a month left) or empty.
+- The barn's info box shows how long the feed in the alley, each hopper and the straw last, and you get a warning when one runs low (under a month left) or empty.
 
 ### Specs
 
@@ -87,6 +87,11 @@ Put `FS25_PigBarnWithRobot.zip` in `Documents/My Games/FarmingSimulator2025/mods
 <p align="center">
   <img src="https://raw.githubusercontent.com/DTM-Mods/.github/main/assets/patch-notes.jpg" alt="Patch notes" width="100%">
 </p>
+
+### 1.0.0.12
+
+- The barn's info box has a new line, **Feed alley lasts**: how long the feed lying in the alley lasts at the pigs' full rate, without the hoppers.
+- The barn's saved data (hopper levels, last crop in each bin, robot spots) is registered properly, so the game no longer warns about it in the log.
 
 ### 1.0.0.10
 
