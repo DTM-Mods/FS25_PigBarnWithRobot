@@ -57,6 +57,16 @@ function PlaceablePigFeedRobot.registerEventListeners(placeableType)
     SpecializationUtil.registerEventListener(placeableType, "onDelete", PlaceablePigFeedRobot)
 end
 
+-- Savegame paths written by saveToXMLFile (the game registers them for every placeable specialization)
+function PlaceablePigFeedRobot.registerSavegameXMLPaths(schema, basePath)
+    schema:setXMLSpecializationType("PigFeedRobot")
+    schema:register(XMLValueType.STRING, basePath .. ".hopper(?)#group", "Marker crop of the hopper's pig food group")
+    schema:register(XMLValueType.FLOAT, basePath .. ".hopper(?)#fillLevel", "Hopper fill level in liters, including feed the robot hasn't dropped yet")
+    schema:register(XMLValueType.STRING, basePath .. ".hopper(?)#lastFillType", "Crop last tipped into the hopper (bin look)")
+    schema:register(XMLValueType.STRING, basePath .. "#robotSpots", "'visual': the robot's own spots only hold copied bin levels")
+    schema:setXMLSpecializationType()
+end
+
 function PlaceablePigFeedRobot.registerOverwrittenFunctions(placeableType)
     SpecializationUtil.registerOverwrittenFunction(placeableType, "updateFeeding", PlaceablePigFeedRobot.updateFeeding)
     SpecializationUtil.registerOverwrittenFunction(placeableType, "updateInfo", PlaceablePigFeedRobot.updateInfo)
@@ -152,6 +162,7 @@ function PlaceablePigFeedRobot:onLoad(savegame)
     spec.loadAtStart = 0
     spec.loadAge = 0
     spec.straw = {warnState = 0}
+    spec.infoAlley = {title="Feed alley lasts", text=""}
     spec.infoStraw = {title="Straw lasts", text=""}
     spec.infoFoodUse = {title="Pigs eat", text=""}
     spec.infoProductivity = {title="Productivity", text=""}
@@ -601,7 +612,7 @@ function PlaceablePigFeedRobot.feedFromHoppers(placeable)
 
         spec.robotStartPending = true
         spec.robotRetryTimer = 0
-            PlaceablePigFeedRobot.tryStartRobot(placeable, spec)
+        PlaceablePigFeedRobot.tryStartRobot(placeable, spec)
     end
     PlaceablePigFeedRobot.updateBinVisuals(placeable, spec)
     PlaceablePigFeedRobot.checkSupplies(placeable, spec)
@@ -872,8 +883,20 @@ function PlaceablePigFeedRobot:updateInfo(superFunc, infoTable)
     local spec = self[PlaceablePigFeedRobot.SPEC_TABLE_NAME]
     local foodPerHour = 0
     for _, group in ipairs(spec.groups) do
+        foodPerHour = foodPerHour + getGroupUsePerHour(self, group)
+    end
+
+    -- the feed lying in the alley now, without the hoppers (the pigs eat it at their full rate)
+    if self.getTotalFood ~= nil then
+        local ok, alley = pcall(self.getTotalFood, self)
+        if ok and type(alley) == "number" then
+            spec.infoAlley.text = string.format("%s l (%s)", formatLiters(alley), PlaceablePigFeedRobot.formatTimeLeft(alley, foodPerHour))
+            table.insert(infoTable, spec.infoAlley)
+        end
+    end
+
+    for _, group in ipairs(spec.groups) do
         local usePerHour = getGroupUsePerHour(self, group)
-        foodPerHour = foodPerHour + usePerHour
         group.info.text = string.format("%s l (%s)", formatLiters(group.fillLevel), PlaceablePigFeedRobot.formatTimeLeft(group.fillLevel, usePerHour))
         table.insert(infoTable, group.info)
     end

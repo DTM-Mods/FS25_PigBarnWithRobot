@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="99" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
     <author>Fennell</author>
-    <version>1.0.0.10</version>
+    <version>1.0.0.12</version>
     <title>
         <en>Pig Barn With Feeding Robot (GEA)</en>
     </title>
@@ -22,7 +22,7 @@ Loose pig crops can go into the feed alley too.
 Manure is stored in the barn and loads at the slurry point. A manure heap nearby adds storage.
 
 Straw bales can be dropped in the feed alley; they go into the straw storage.
-The barn's info box shows how long each hopper and the straw last, and you get a warning when one runs low (under a month left) or empty.
+The barn's info box shows how long the feed in the alley, each hopper and the straw last, and you get a warning when one runs low (under a month left) or empty.
 
 Price: 800,000
 Upkeep: 700 / day
