@@ -88,6 +88,10 @@ Put `FS25_PigBarnWithRobot.zip` in `Documents/My Games/FarmingSimulator2025/mods
   <img src="https://raw.githubusercontent.com/DTM-Mods/.github/main/assets/patch-notes.jpg" alt="Patch notes" width="100%">
 </p>
 
+### 1.0.0.13
+
+- The author now shows as **DTM Mods, Fennell** in the mod list.
+
 ### 1.0.0.12
 
 - The barn's info box has a new line, **Feed alley lasts**: how long the feed lying in the alley lasts at the pigs' full rate, without the hoppers.
