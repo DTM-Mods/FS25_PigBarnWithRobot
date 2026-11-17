@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<modDesc descVersion="99" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
+<modDesc descVersion="115" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
     <author>DTM Mods, Fennell</author>
-    <version>1.0.0.13</version>
+    <version>1.0.0.14</version>
     <title>
         <en>Pig Barn With Feeding Robot (GEA)</en>
     </title>
@@ -36,7 +36,46 @@ Root crop bin: 120,000 l
 Grain bin: 500,000 l
 Base feed silo: 1,000,000 l
 Robot mixer: 30,000 l
-Automatic water supply]]></en>
+Automatic water supply
+
+Changelog 1.0.0.14:
+- Meets the GIANTS ModHub checks (TestRunner): textures, icon and modDesc brought up to date.
+- Errors are no longer hidden: they show in the log.]]></en>
+        <de><![CDATA[Der große Hörmann-Stall mit dem GEA-Fütterungsroboter, umgebaut für Schweine.
+
+Füll die vier Vorratsbehälter des Roboters, und der Stall wird jede Stunde daraus gefüttert:
+- Silo außen: Grundfutter (Mais oder Sorghum), 50 %
+- Getreidebehälter: Getreide (Weizen oder Gerste), 25 %
+- Eiweißbehälter: Eiweiß (Sojabohnen, Raps oder Sonnenblumen), 20 %
+- Hackfruchtbehälter: Hackfrüchte (Kartoffeln oder Zuckerrüben), 5 %
+Jeder Behälter nimmt jede Frucht seiner Gruppe an, auch die, die deine Karte hinzufügt, und sonst nichts.
+Jede Gruppe liefert ihren eigenen Anteil, ein leerer Behälter stoppt also nur diesen Teil der Ration.
+
+Zugekauftes Schweinefutter wird direkt in den Futtergang im Stall gekippt, wie TMR im Kuhstall. Der Roboter mischt nur Feldfrüchte.
+Lose Früchte für Schweine können ebenfalls in den Futtergang.
+
+Mist wird im Stall gelagert und an der Gülle-Ladestelle geladen. Ein Misthaufen in der Nähe erweitert das Lager.
+
+Strohballen können im Futtergang abgeladen werden; sie kommen ins Strohlager.
+Die Infobox des Stalls zeigt, wie lange das Futter im Futtergang, jeder Behälter und das Stroh reichen, und du bekommst eine Warnung, wenn etwas knapp wird (weniger als ein Monat übrig) oder leer ist.
+
+Preis: 800.000
+Unterhalt: 700 / Tag
+Schweine: bis zu 1500
+Futter: 800.000 l
+Stroh: 1.000.000 l
+Gülle: 1.500.000 l
+Mist: 1.200.000 l
+Eiweißbehälter: 400.000 l
+Hackfruchtbehälter: 120.000 l
+Getreidebehälter: 500.000 l
+Grundfuttersilo: 1.000.000 l
+Robotermischer: 30.000 l
+Automatische Wasserversorgung
+
+Changelog 1.0.0.14:
+- Erfüllt die GIANTS-ModHub-Prüfungen (TestRunner): Texturen, Icon und modDesc auf den neuesten Stand gebracht.
+- Fehler werden nicht mehr versteckt und erscheinen im Log.]]></de>
     </description>
 
     <iconFilename>icon_pigBarnRobot.dds</iconFilename>

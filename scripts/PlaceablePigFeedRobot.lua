@@ -359,12 +359,8 @@ function PlaceablePigFeedRobot.updateBinVisuals(placeable, spec, onlyGroup)
     end
 
     local function robotUpdateSpot(spot)
-        if robot.updateUnloadingSpot ~= nil then
-            local ok, err = pcall(robot.updateUnloadingSpot, robot, spot)
-            if not ok and not spec.binVisualErrorLogged then
-                spec.binVisualErrorLogged = true
-                Logging.warning(LOG_PREFIX .. "bin fill display failed: %s", tostring(err))
-            end
+        if robot.updateUnloadingSpot ~= nil and type(spot) == "table" then
+            robot:updateUnloadingSpot(spot)
         end
     end
 
@@ -388,8 +384,8 @@ function PlaceablePigFeedRobot.updateBinVisuals(placeable, spec, onlyGroup)
                         if spot ~= nil and spot.fillLevel ~= nil then
                             robotUpdateSpot(spot)
                         end
-                        local ok, visible = pcall(getVisibility, volume)
-                        group.binMode = (ok and visible) and "robot" or "manual"
+                        local visible = entityExists(volume) and getVisibility(volume)
+                        group.binMode = visible and "robot" or "manual"
                     end
 
                     if group.binMode == "manual" then
@@ -434,18 +430,20 @@ PlaceablePigFeedRobot.BIN_SPREAD = 3
 
 -- Draws the hopper level into the bin's fill plane (the engine's fillPlaneAdd works in liters, like vehicle trailers)
 function PlaceablePigFeedRobot.drawBin(group, volume, level)
+    if not entityExists(volume) then
+        return
+    end
+
     local delta = level - (group.drawnLevel or 0)
-    if math.abs(delta) >= 1 then
+    if math.abs(delta) >= 1 and fillPlaneAdd ~= nil then
         local size = PlaceablePigFeedRobot.BIN_SPREAD
         local x, y, z = localToWorld(volume, -size * 0.5, 0, -size * 0.5)
         local d1x, d1y, d1z = localDirectionToWorld(volume, size, 0, 0)
         local d2x, d2y, d2z = localDirectionToWorld(volume, 0, 0, size)
-        local ok = pcall(fillPlaneAdd, volume, delta, x, y, z, d1x, d1y, d1z, d2x, d2y, d2z)
-        if ok then
-            group.drawnLevel = level
-        end
+        fillPlaneAdd(volume, delta, x, y, z, d1x, d1y, d1z, d2x, d2y, d2z)
+        group.drawnLevel = level
     end
-    pcall(setVisibility, volume, level > 0)
+    setVisibility(volume, level > 0)
 end
 
 -- Bin look: the bin's fill volume shows the crop last tipped (the robot draws it with its spot's fixed crop).
@@ -479,7 +477,9 @@ function PlaceablePigFeedRobot.applyBinFillType(placeable, spec, group, spot)
     end
 
     for _, shape in ipairs(shapes) do
-        pcall(setShaderParameter, shape, "fillTypeId", textureArrayIndex - 1, 0, 0, 0, false)
+        if entityExists(shape) and getHasClassId(shape, ClassIds.SHAPE) and getHasShaderParameter(shape, "fillTypeId") then
+            setShaderParameter(shape, "fillTypeId", textureArrayIndex - 1, 0, 0, 0, false)
+        end
     end
     if #shapes > 0 then
         group.shownFillType = group.lastFillType
@@ -497,7 +497,7 @@ local function withEmptyRobotSpots(placeable, func, ...)
         end
     end
 
-    local results = {pcall(func, ...)}
+    local results = {func(...)}
 
     if robot ~= nil and robot.unloadingSpots ~= nil then
         for i, spot in pairs(robot.unloadingSpots) do
@@ -507,10 +507,7 @@ local function withEmptyRobotSpots(placeable, func, ...)
         end
     end
 
-    if not results[1] then
-        error(results[2], 0)
-    end
-    return unpack(results, 2)
+    return unpack(results)
 end
 
 -- Moves crops a barn built with an older version stored in the robot itself into the hoppers (once, server only)
@@ -527,11 +524,11 @@ function PlaceablePigFeedRobot.moveRobotStock(placeable, spec)
 
     for _, group in ipairs(spec.groups) do
         for _, fillTypeIndex in ipairs(group.fillTypes) do
-            local ok, fillLevel = pcall(robot.getFillLevel, robot, fillTypeIndex)
-            if ok and type(fillLevel) == "number" and fillLevel > 0 then
-                local amount = math.min(fillLevel, group.capacity - group.fillLevel)
-                local removedOk, removed = pcall(robot.removeFillLevel, robot, amount, fillTypeIndex)
-                if removedOk and type(removed) == "number" and removed > 0 then
+            local fillLevel = robot:getFillLevel(fillTypeIndex)
+            local amount = type(fillLevel) == "number" and math.min(fillLevel, group.capacity - group.fillLevel) or 0
+            if amount > 0 then
+                local removed = robot:removeFillLevel(amount, fillTypeIndex)
+                if type(removed) == "number" and removed > 0 then
                     group.fillLevel = group.fillLevel + removed
                     placeable:raiseDirtyFlags(spec.dirtyFlag)
                 end
@@ -636,8 +633,11 @@ end
 -- Liters per in-game hour the pigs eat from one group (1.0x, what the barn uses up in the long run)
 local function getGroupUsePerHour(placeable, group)
     local timeAdjustment = g_currentMission.environment.timeAdjustment or 1
-    local ok, litersPerHour = pcall(placeable.getFoodLitersPerHour, placeable)
-    if not ok or type(litersPerHour) ~= "number" then
+    if placeable.getFoodLitersPerHour == nil then
+        return 0
+    end
+    local litersPerHour = placeable:getFoodLitersPerHour()
+    if type(litersPerHour) ~= "number" then
         return 0
     end
     return litersPerHour * timeAdjustment * group.weight
@@ -655,8 +655,8 @@ local function getStrawLevel(placeable)
     if placeable.getHusbandryFillLevel == nil or FillType == nil or FillType.STRAW == nil then
         return nil
     end
-    local ok, level = pcall(placeable.getHusbandryFillLevel, placeable, FillType.STRAW)
-    return ok and type(level) == "number" and level or nil
+    local level = placeable:getHusbandryFillLevel(FillType.STRAW)
+    return type(level) == "number" and level or nil
 end
 
 -- "4.2 months", "3 days", "5 h" or "-" when nothing is used
@@ -806,8 +806,8 @@ function PlaceablePigFeedRobot.updateLoad(placeable, spec, dt)
         spec.robotLeftPause = true
     end
 
-    local ok, factor = pcall(robot.getFeedingFactor, robot)
-    factor = ok and type(factor) == "number" and math.max(math.min(factor, 1), 0) or 0
+    local factor = robot:getFeedingFactor()
+    factor = type(factor) == "number" and math.max(math.min(factor, 1), 0) or 0
 
     if factor > 0 then
         spec.robotSeenFeeding = true
@@ -848,19 +848,14 @@ function PlaceablePigFeedRobot.tryStartRobot(placeable, spec)
         return
     end
 
-    local ok, err = pcall(robot.start, robot)
-    if not ok then
-        Logging.warning(LOG_PREFIX .. "the feeding robot could not start: %s", tostring(err))
-        spec.robotStartPending = false
-        return
-    end
+    -- cleared before the call, so a start that fails shows its error once instead of being retried every 500 ms
+    spec.robotStartPending = false
+    robot:start()
 
     if robot.requestedStart == false and robot.stateIndex == state.PAUSED then
         -- someone is in its zone: try again
-        return
+        spec.robotStartPending = true
     end
-
-    spec.robotStartPending = false
 end
 
 -- The barn got its hourly update (normally or from the watchdog)
@@ -888,8 +883,8 @@ function PlaceablePigFeedRobot:updateInfo(superFunc, infoTable)
 
     -- the feed lying in the alley now, without the hoppers (the pigs eat it at their full rate)
     if self.getTotalFood ~= nil then
-        local ok, alley = pcall(self.getTotalFood, self)
-        if ok and type(alley) == "number" then
+        local alley = self:getTotalFood()
+        if type(alley) == "number" then
             spec.infoAlley.text = string.format("%s l (%s)", formatLiters(alley), PlaceablePigFeedRobot.formatTimeLeft(alley, foodPerHour))
             table.insert(infoTable, spec.infoAlley)
         end
