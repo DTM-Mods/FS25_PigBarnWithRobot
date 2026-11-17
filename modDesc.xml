@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<modDesc descVersion="115" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
+<modDesc descVersion="116" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
     <author>DTM Mods, Fennell</author>
-    <version>1.0.0.14</version>
+    <version>1.0.0.15</version>
     <title>
         <en>Pig Barn With Feeding Robot (GEA)</en>
     </title>
@@ -38,9 +38,8 @@ Base feed silo: 1,000,000 l
 Robot mixer: 30,000 l
 Automatic water supply
 
-Changelog 1.0.0.14:
-- Meets the GIANTS ModHub checks (TestRunner): textures, icon and modDesc brought up to date.
-- Errors are no longer hidden: they show in the log.]]></en>
+Changelog 1.0.0.15:
+- Updated for the current game version (modDesc version 116).]]></en>
         <de><![CDATA[Der große Hörmann-Stall mit dem GEA-Fütterungsroboter, umgebaut für Schweine.
 
 Füll die vier Vorratsbehälter des Roboters, und der Stall wird jede Stunde daraus gefüttert:
@@ -73,9 +72,8 @@ Grundfuttersilo: 1.000.000 l
 Robotermischer: 30.000 l
 Automatische Wasserversorgung
 
-Changelog 1.0.0.14:
-- Erfüllt die GIANTS-ModHub-Prüfungen (TestRunner): Texturen, Icon und modDesc auf den neuesten Stand gebracht.
-- Fehler werden nicht mehr versteckt und erscheinen im Log.]]></de>
+Changelog 1.0.0.15:
+- An die aktuelle Spielversion angepasst (modDesc-Version 116).]]></de>
     </description>
 
     <iconFilename>icon_pigBarnRobot.dds</iconFilename>
