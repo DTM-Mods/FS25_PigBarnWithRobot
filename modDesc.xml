@@ -6,7 +6,13 @@
         <en>Pig Barn With Feeding Robot (GEA)</en>
     </title>
     <description>
-        <en><![CDATA[The big Hörmann barn with the GEA feeding robot, converted for pigs.
+        <en><![CDATA[Category: Animal Pens
+Price: $800,000
+Monthly upkeep: $700
+Production recipe: base feed 50% + grains 25% + protein 20% + root crops 5% -> pig food, mixed by the GEA robot every hour
+Configurations: colour (13 colours), solar panels (+$187,500)
+
+The big Hörmann barn with the GEA feeding robot, converted for pigs.
 
 Fill the robot's four hoppers and the barn is fed from them every hour:
 - Silo outside: base feed (corn or sorghum), 50%
@@ -24,8 +30,6 @@ Manure is stored in the barn and loads at the slurry point. A manure heap nearby
 Straw bales can be dropped in the feed alley; they go into the straw storage.
 The barn's info box shows how long the feed in the alley, each hopper and the straw last, and you get a warning when one runs low (under a month left) or empty.
 
-Price: 800,000
-Upkeep: 700 / day
 Pigs: up to 1500
 Food: 800,000 l
 Straw: 1,000,000 l
@@ -40,7 +44,13 @@ Automatic water supply
 
 Changelog 1.0.0.15:
 - Updated for the current game version (modDesc version 116).]]></en>
-        <de><![CDATA[Der große Hörmann-Stall mit dem GEA-Fütterungsroboter, umgebaut für Schweine.
+        <de><![CDATA[Kategorie: Tiergehege
+Preis: 800.000 €
+Monatliche Unterhaltskosten: 700 €
+Produktionsrezepte: Grundfutter 50 % + Getreide 25 % + Eiweiß 20 % + Hackfrüchte 5 % -> Schweinefutter, stündlich vom GEA-Roboter gemischt
+Konfigurationen: Farbe (13 Farben), Solarmodule (+187.500 €)
+
+Der große Hörmann-Stall mit dem GEA-Fütterungsroboter, umgebaut für Schweine.
 
 Füll die vier Vorratsbehälter des Roboters, und der Stall wird jede Stunde daraus gefüttert:
 - Silo außen: Grundfutter (Mais oder Sorghum), 50 %
@@ -58,8 +68,6 @@ Mist wird im Stall gelagert und an der Gülle-Ladestelle geladen. Ein Misthaufen
 Strohballen können im Futtergang abgeladen werden; sie kommen ins Strohlager.
 Die Infobox des Stalls zeigt, wie lange das Futter im Futtergang, jeder Behälter und das Stroh reichen, und du bekommst eine Warnung, wenn etwas knapp wird (weniger als ein Monat übrig) oder leer ist.
 
-Preis: 800.000
-Unterhalt: 700 / Tag
 Schweine: bis zu 1500
 Futter: 800.000 l
 Stroh: 1.000.000 l
